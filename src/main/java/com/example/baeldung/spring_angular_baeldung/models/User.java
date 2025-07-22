@@ -1,4 +1,4 @@
-package com.example.baeldung.spring_angular_baeldung.model;
+package com.example.baeldung.spring_angular_baeldung.models;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
