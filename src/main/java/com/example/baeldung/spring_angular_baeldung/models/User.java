@@ -1,13 +1,11 @@
 package com.example.baeldung.spring_angular_baeldung.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 import java.util.Objects;
 
 @Entity
+@Table(name = "users")
 public class User {
 
     @Id
@@ -16,10 +14,14 @@ public class User {
     private final String name;
     private final String email;
 
-    public User(String email, String name, long id) {
-        this.email = email;
+    public User(){
+        name = "";
+        email = "";
+    }
+
+    public User(String name, String email) {
         this.name = name;
-        this.id = id;
+        this.email = email;
     }
 
     public long getId() {
